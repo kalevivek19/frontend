@@ -1,0 +1,19 @@
+Machine Name: <a routerLink="/machine/1" routerLinkActive="active"><b>Machine One</b></a>
+<br>
+Machine Status: <span *ngIf="machineStatus" style="color: green;">Running</span> <span *ngIf="!machineStatus"
+	style="color: red;">Stopped</span>
+<br>
+
+<!-- <div *ngFor="let data of machineData">
+	<div>Temperature: {{data.temperature}} <br> Humidity: {{data.humidity}}</div>
+</div> -->
+
+<!-- <fusioncharts type="angulargauge" width="300" height="250" dataFormat="json" [dataSource]="dataSource"></fusioncharts> -->
+
+
+<br>
+Machine Name: <a routerLink="/machine/2" routerLinkActive="active"><b>Machine Two</b></a>
+<br>
+Machine Status: <span *ngIf="machineTwoStatus" style="color: green;">Running</span> <span *ngIf="!machineTwoStatus"
+	style="color: red;">Stopped</span>
+<br><br>

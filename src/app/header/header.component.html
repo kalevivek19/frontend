@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="header">
+        <nav>
+            <a routerLink="/machines" routerLinkActive="active">Machines</a> |
+            <a href="signOut()">Logout</a>
+        </nav>
+    </div>
+
+    <div *ngIf="user">
+        <img src="{{ user.photoUrl }}" referrerpolicy="no-referrer">
+        <div>
+            Hallo, {{ user.name }} ({{ user.email }})!
+        </div>
+    </div>
+    <br>

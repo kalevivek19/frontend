@@ -1,0 +1,33 @@
+<div class="wrapper" style="margin-top: 30%;">
+    <div class="title">
+        Login
+    </div>
+
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+        <div class="field">
+            <input type="text" value="" [formControl]="email">
+            <label>Email Address</label>
+        </div>
+        <div class="field">
+            <input type="password" value="" [formControl]="password">
+            <label>Password</label>
+        </div>
+        <div class="content">
+            <div class="checkbox">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+            <div class="pass-link">
+                <a href="#">Forgot password?</a>
+            </div>
+        </div>
+        <div class="field">
+            <input type="button" value="Login" (click)="onSubmit()">
+        </div><br>
+        <div style="padding-left: 46%;"><asl-google-signin-button *ngIf="!user"></asl-google-signin-button></div>
+        <div class="signup-link">
+            Not a member? <a href="#">Signup now</a>
+        </div>
+
+    </form>
+</div>

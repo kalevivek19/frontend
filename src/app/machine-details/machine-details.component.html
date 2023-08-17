@@ -1,0 +1,26 @@
+Machine Name: <b>{{nameText}}</b>
+<br>
+Machine Status: <span *ngIf="machineStatus" style="color: green;">Running</span> <span *ngIf="!machineStatus"
+    style="color: red;">Stopped</span>
+<br>
+
+<div *ngFor="let data of machineData">
+    <div>
+        P_Gesamt_kw: <b>{{data.P_Gesamt_kw}} </b><br>
+        IFM_S2_B_DS_Veff_A_m_s: <b>{{data.IFM_S2_B_DS_Veff_A_m_s}}</b><br>
+        IFM_S2_B_DS_Veff_B_m_s: <b>{{data.IFM_S2_B_DS_Veff_B_m_s}}</b><br>
+        IFM_S2_B_FR_DS_NJ215_m_s_2: <b>{{data.IFM_S2_B_FR_DS_NJ215_m_s_2}}</b><br>
+        IFM_S2_B_MR_DS_NU2317_m_s_2: <b>{{data.IFM_S2_B_MR_DS_NU2317_m_s_2}}</b><br>
+    </div>
+</div>
+
+<fusioncharts type="angulargauge" width="400" height="250" dataFormat="json" [dataSource]="dataSource"></fusioncharts>
+<br>
+<fusioncharts type="angulargauge" width="400" height="250" dataFormat="json"
+    [dataSource]="dataSource_IFM_S2_B_DS_Veff_A_m_s"></fusioncharts> <br>
+<fusioncharts type="angulargauge" width="400" height="250" dataFormat="json"
+    [dataSource]="dataSource_IFM_S2_B_DS_Veff_B_m_s"></fusioncharts> <br>
+<fusioncharts type="angulargauge" width="400" height="250" dataFormat="json"
+    [dataSource]="dataSource_IFM_S2_B_FR_DS_NJ215_m_s_2"></fusioncharts> <br>
+<fusioncharts type="angulargauge" width="400" height="250" dataFormat="json"
+    [dataSource]="dataSource_IFM_S2_B_MR_DS_NU2317_m_s_2"></fusioncharts>
